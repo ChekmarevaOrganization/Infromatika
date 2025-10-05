@@ -1,0 +1,14 @@
+import random
+
+def create_matrix(rows, cols, start=0, end=10):
+    matrix = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            row.append(random.randint(start, end))
+        matrix.append(row)
+    return matrix
+matrix = create_matrix(3, 3, 1, 9)
+print("Заполненная матрица:")
+for row in matrix:
+    print(row)
